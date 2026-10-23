@@ -1,0 +1,39 @@
+img{
+    width: 100vw;
+}
+/* 기본 여백 제거 및 스크롤 방지 */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #111;
+}
+
+#gameContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    /* 배경 이미지 */
+    background-image: url('./background.jpg');
+    background-size: cover;
+    background-position: center;
+    /* 화면 밖으로 나간 팝업 숨김 */
+    overflow: hidden; 
+}
+
+/* 기존 .popup-item 코드를 아래 코드로 완전히 교체하세요 */
+.popup-item {
+    position: absolute;
+    /* 원하는 최대 크기 지정 (비율은 원본 유지됨) */
+    max-width: 20vw; 
+    /* max-height: 150px;  */
+    cursor: pointer;
+    transition: transform 0.05s ease-in-out;
+    /* 동그란 테두리와 배경 관련 속성 모두 제거됨 */
+}
+
+.popup-item:hover {
+    filter: brightness(1.0);
+}
